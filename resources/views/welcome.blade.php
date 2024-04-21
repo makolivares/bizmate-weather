@@ -6,9 +6,9 @@
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
     </head>
-    <body class="bg-black/50">
-        <div id="app" class="flex justify-center pt-32">
-            <weather-component :weather-data="weatherData"></weather-component>
+    <body class="bg-[#36573c]">
+        <div id="app">
+            <weather-component></weather-component>
         </div>
     </body>
 

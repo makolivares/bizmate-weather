@@ -16,9 +16,7 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 import BizmateWeather from './components/BizmateWeather.vue';
-import ComingWeathers from './components/ComingWeathers.vue';
 app.component('weather-component', BizmateWeather);
-app.component('coming-component', ComingWeathers);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

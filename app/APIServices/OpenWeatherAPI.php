@@ -6,24 +6,35 @@ use GuzzleHttp\Client;
 
 class OpenWeatherAPI
 {
-    private $apiKey;
+    protected $apiKey;
+    protected $baseUrl;
 
-    public function __construct(string $apiKey)
+    public function __construct($apiKey)
     {
         $this->apiKey = $apiKey;
+        $this->baseUrl = 'https://api.openweathermap.org/data/2.5/forecast';
     }
 
-    public function getWeatherByCity(string $city): array
+    public function getCurrentWeather(string $city)
     {
         $client = new Client();
-        $url = "https://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$this->apiKey}&units=metric";
 
-        $response = $client->get($url);
+        $response = $client->get($this->baseUrl, [
+            'query' => [
+                'q' => $city,
+                'units' => 'metric',
+                'cnt' => 7,
+                'appid' => $this->apiKey
+
+            ]
+        ]);
 
         if ($response->getStatusCode() === 200) {
             return json_decode($response->getBody(), true);
-        } else {
-            return ['error' => 'Failed to retrieve weather data'];
         }
+
+        return ['error' => 'Failed to retrieve weather data'];
+
     }
+
 }

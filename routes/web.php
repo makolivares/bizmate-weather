@@ -16,5 +16,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/get-weather', 'App\Http\Controllers\WeatherController@getWeather');
+Route::get('/get-weather', 'App\Http\Controllers\WeatherController@getWeather')->middleware('check.api.request');
+Route::get('/get-places', 'App\Http\Controllers\WeatherController@getPlaces')->middleware('check.api.request');
