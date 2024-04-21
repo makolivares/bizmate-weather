@@ -7,7 +7,7 @@
         @vite('resources/js/app.js')
     </head>
     <body class="bg-[#36573c]">
-        <div id="app">
+        <div id="app" class="pb-5">
             <weather-component></weather-component>
         </div>
     </body>

@@ -20,9 +20,17 @@ class WeatherController extends Controller
     public function getWeather(Request $request)
     {
         $city = $request->input('city', 'Tokyo');
-        return response()->json([
-            'weather' => $this->weatherService->getCurrentWeather($city),
-            'location' => $this->locationService->searchPlaces($city)
-        ]);
+
+        return response()->json($this->weatherService->getCurrentWeather($city));
+    }
+
+    public function getPlaces(Request $request)
+    {
+        $city = $request->input('city', 'Tokyo');
+        $data = $this->weatherService->getCurrentWeather($city);
+        $lat = $data['city']['coord']['lat'];
+        $lng = $data['city']['coord']['lon'];
+
+        return response()->json($this->locationService->searchPlaces($lat, $lng));
     }
 }
