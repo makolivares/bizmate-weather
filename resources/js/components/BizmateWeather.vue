@@ -3,7 +3,7 @@
     <div v-if="loading" class="weather-app__loader flex items-center justify-center fixed w-full h-full z-10 top-0 left-0 bg-[#168e76] bg-opacity-70">
       <img src="/images/loader.gif" alt="loader" class="w-20">
     </div>
-    <div class="weather-app__location-btn grid-cols-6 gap-2 w-full max-w-[950px] flex-wrap mx-auto mt-7 hidden md:grid">
+    <div class="weather-app__location-btn grid-cols-6 gap-2 w-full max-w-[905px] flex-wrap mx-auto mt-7 hidden md:grid">
       <button class="bg-[#00896d] hover:bg-[#168e76] text-white font-bold py-2 px-4 rounded" @click="populateInput">Tokyo</button>
       <button class="bg-[#00896d] hover:bg-[#168e76] text-white font-bold py-2 px-4 rounded" @click="populateInput">Yokohama</button>
       <button class="bg-[#00896d] hover:bg-[#168e76] text-white font-bold py-2 px-4 rounded" @click="populateInput">Kyoto</button>
