@@ -17,7 +17,6 @@ In order to set this up follow the steps below:
     <li>Run the project by using npm run start</li>
 </ol>
 
-This is quite a straight forward app and best for tourist that is new in traveling in Japan, this website app will provide a decent app of information regarding the weather with the designated time that it will be affected.
-And, near places on the cities that you will gonna visit. By just clicking the button, it will provide you all the information you need.
+This app is designed to be straightforward, making it ideal for tourists who are new to traveling in Japan. The website provides comprehensive information about the weather, including forecasts for specific times when it will be affected. Additionally, it offers details about nearby attractions in the cities you plan to visit. With just a click of a button, you can access all the information you need.
 
-This website app is responsive enough that it can be viewed on mobile devices and will have an ease of use.
+The website is responsive, ensuring it can be easily viewed on mobile devices, offering a user-friendly experience.
